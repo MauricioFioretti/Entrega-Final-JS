@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+/* Definición de variables de color */
+/* Gradiente para el fondo del footer */
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    min-height: 100vh;
+    /* Definición de grid */
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    /* Definición de las áreas del grid */
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
+/* Estilos del encabezado para desktop y tablet */
+.header__desktop {
+    grid-area: header;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-areas: "header__logo header__titulo header__nav";
+    /* Estilos del título en el encabezado */
+    /* Estilos del nav en el encabezado */
+}
+
+.header__desktop .header__caja-logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* Estilos del logo en el encabezado */
+}
+
+.header__desktop .header__caja-logo .header__logo {
+    grid-area: header__logo;
+    width: 7.5rem;
+    background-color: white;
+}
+
+.header__desktop .header__titulo {
+    padding-left: 2rem;
+    background-color: white;
+    grid-area: header__titulo;
+    height: 100%;
+    text-align: left;
+    padding-top: 2rem;
+    /* Estilos de la clase "secretaria" dentro del título */
+    /* Estilos de la clase "olimpiadas" dentro del título */
+}
+
+.header__desktop .header__titulo .secretaria {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.header__desktop .header__titulo .olimpiadas {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header__desktop .header__nav {
+    font-size: 30px;
+    font-weight: 700;
+    grid-area: header__nav;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    /* Estilos del menú en el nav */
+}
+
+
+.header__desktop .header__nav .header__menu .header__menu-item .header__menu-link {
+    color: #0096DA;
+    transition: 100ms;
+}
+
+.header__desktop .header__nav .header__menu .header__menu-item .header__menu-link:hover {
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006794;
+    border: none;
+    border-radius: 50px;
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media screen and (min-width: 767px) and (max-width: 1292px) {
+    .header__desktop {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "header__logo header__titulo"
+            "header__nav header__nav";
+        /* Alineación centrada del título en pantallas medianas */
+    }
+
+    .header__desktop .header__caja-logo .header__logo {
+        margin-left: 1rem;
+    }
+
+    .header__desktop .header__titulo {
+        text-align: center;
+    }
+}
+
+/* Estilos del main competencias */
+.main__libros {
+    grid-area: main;
+    /* Estilos de los párrafos */
+    text-align: center;
+    /* Estilos de cada sección */
+}
+
+.main__libros .compra__libros {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.main__libros .compra__libros h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.main__libros .compra__libros p {
+    padding: 0 3rem;
+}
+
+.main__libros .compra__libros a {
+    padding: auto;
+}
+
+.main__libros section h2 {
+    padding: 2rem 0;
+}
+
+.main__libros section .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main__libros section .container-cards .card {
+    width: 20rem;
+    margin: 2rem;
+}
+
+.main__libros section .container-cards .card .card-body input {
+    margin: 10px;
+}
+
+.main__libros .table {
+    margin-top: 3rem;
+}
+
+.main__libros .boton-eliminar {
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+}
+
+.main__libros .boton-finalizar {
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+}
+
+/* Estilos del pie de página */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1.3fr;
+    grid-template-areas: "izq-footer linea der-footer";
+    grid-area: footer;
+    height: auto;
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 0.8;
+    font-weight: 300;
+    background: linear-gradient(90deg, #012a3d, #016794, #0096db, #3f87a6);
+    /* Estilos del contenido izquierdo del pie de página */
+    /* Estilos de la línea vertical del pie de página */
+    /* Estilos del contenido derecho del pie de página */
+}
+
+footer .footer__izq {
+    grid-area: izq-footer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 5%;
+    /* Estilos del logo izquierdo del pie de página */
+}
+
+footer .footer__izq .footer__logo-izq {
+    width: 55%;
+}
+
+footer .footer__line {
+    grid-area: linea;
+    width: 2px;
+    height: 80%;
+    background-color: white;
+    opacity: 1;
+    align-self: center;
+}
+
+footer .footer__der {
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+    margin-left: 5rem;
+    /* Datos de contacto */
+    /* Correo de contacto */
+    /* Iconos de redes sociales */
+    /* Estilos del logo derecho del pie de página */
+}
+
+footer .footer__der .datosContacto {
+    padding-top: 10%;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+footer .footer__der .correo-oma {
+    padding: 4vh 0;
+    grid-row: 2;
+    margin-bottom: 0;
+}
+
+footer .footer__der .iconos {
+    grid-row: 3;
+    padding-bottom: 7vh;
+}
+
+footer .footer__der .iconos .iconos-face {
+    margin-right: 5vh;
+}
+
+footer .footer__der .iconos img {
+    width: 7vh;
+}
+
+footer .footer__der .logo {
+    grid-row: 4;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer .footer__der .logo img {
+    width: 30vh;
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media screen and (max-width: 1263px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas: "der-footer";
+        font-size: 1.5rem;
+        font-weight: 400;
+        /* Ocultar contenido izquierdo en pantallas medianas */
+        /* Ocultar línea vertical en pantallas medianas */
+        /* Estilos del contenido derecho del pie de página */
+    }
+
+    footer .footer__izq {
+        display: none;
+    }
+
+    footer .footer__line {
+        display: none;
+    }
+
+    footer .footer__der .logo img {
+        width: 30vh;
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    footer {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    footer .footer__der {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        /* Datos de contacto */
+        /* Correo de contacto */
+        /* Iconos de redes sociales */
+        /* Ocultar logo en pantallas pequeñas */
+    }
+
+    footer .footer__der .datosContacto {
+        line-height: 1.4;
+    }
+
+    footer .footer__der .correo {
+        line-height: 1.2;
+        padding: 2.5rem 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    footer .footer__der .iconos img {
+        width: 3.5rem;
+    }
+
+    footer .footer__der .logo {
+        display: none;
+    }
+}

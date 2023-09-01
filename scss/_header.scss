@@ -1,0 +1,103 @@
+/* Estilos del encabezado para desktop y tablet */
+.header__desktop {
+    grid-area: header;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-areas:
+        "header__logo header__titulo header__nav";
+
+    .header__caja-logo {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        /* Estilos del logo en el encabezado */
+        .header__logo {
+            grid-area: header__logo;
+            width: 7.5rem;
+            background-color: white;
+        }
+    }
+
+    /* Estilos del título en el encabezado */
+    .header__titulo {
+        padding-left: 2rem;
+        background-color: white;
+        grid-area: header__titulo;
+        height: 100%;
+        text-align: left;
+        padding-top: 2rem;
+
+        /* Estilos de la clase "secretaria" dentro del título */
+        .secretaria {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Estilos de la clase "olimpiadas" dentro del título */
+        .olimpiadas {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    /* Estilos del nav en el encabezado */
+    .header__nav {
+        font-size: 30px;
+        font-weight: 700;
+        grid-area: header__nav;
+        background-color: white;
+        justify-self: center;
+        align-self: center;
+
+        /* Estilos del menú en el nav */
+        .header__menu {
+
+            /* Estilos de los elementos del menú en el nav */
+            .header__menu-item {
+
+                /* Estilos de los enlaces del menú en el nav */
+                .header__menu-link {
+                    color: $LetraAzul;
+                    transition: 100ms;
+
+                    &:hover {
+                        color: white;
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: $FondoAzul;
+                        border: none;
+                        border-radius: 50px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media screen and (min-width: 767px) and (max-width: 1292px) {
+
+    .header__desktop {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "header__logo header__titulo"
+            "header__nav header__nav";
+
+        .header__caja-logo {
+
+            /* Estilos del logo en el encabezado */
+            .header__logo {
+                margin-left: 1rem;
+            }
+        }
+
+        /* Alineación centrada del título en pantallas medianas */
+        .header__titulo {
+            text-align: center;
+        }
+    }
+}

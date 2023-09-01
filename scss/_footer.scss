@@ -1,0 +1,164 @@
+/* Estilos del pie de página */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1.3fr;
+    grid-template-areas:
+        "izq-footer linea der-footer";
+    grid-area: footer;
+    height: auto;
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 0.8;
+    font-weight: 300;
+
+    background: $GradienteFooter;
+
+    /* Estilos del contenido izquierdo del pie de página */
+    .footer__izq {
+        grid-area: izq-footer;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-left: 5%;
+
+        /* Estilos del logo izquierdo del pie de página */
+        .footer__logo-izq {
+            width: 55%;
+        }
+    }
+
+    /* Estilos de la línea vertical del pie de página */
+    .footer__line {
+        grid-area: linea;
+        width: 2px;
+        height: 80%;
+        background-color: white;
+        opacity: 1;
+        align-self: center;
+    }
+
+    /* Estilos del contenido derecho del pie de página */
+    .footer__der {
+        display: grid;
+        grid-template-rows: 1fr auto auto auto;
+        margin-left: 5rem;
+
+        /* Datos de contacto */
+        .datosContacto {
+            padding-top: 10%;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+        }
+
+        /* Correo de contacto */
+        .correo-oma {
+            padding: 4vh 0;
+            grid-row: 2;
+            margin-bottom: 0;
+        }
+
+        /* Iconos de redes sociales */
+        .iconos {
+            grid-row: 3;
+            padding-bottom: 7vh;
+
+            .iconos-face {
+                margin-right: 5vh;
+            }
+
+            img {
+                width: 7vh;
+            }
+        }
+
+        /* Estilos del logo derecho del pie de página */
+        .logo {
+            grid-row: 4;
+            display: flex;
+            justify-content: end;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+
+            img {
+                width: 30vh;
+            }
+        }
+    }
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media screen and (max-width: 1263px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "der-footer";
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        /* Ocultar contenido izquierdo en pantallas medianas */
+        .footer__izq {
+            display: none;
+        }
+
+        /* Ocultar línea vertical en pantallas medianas */
+        .footer__line {
+            display: none;
+        }
+
+        /* Estilos del contenido derecho del pie de página */
+        .footer__der {
+            .logo {
+                img {
+                    width: 30vh;
+                }
+            }
+        }
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+
+    footer {
+        font-size: 1rem;
+        font-weight: 400;
+
+        .footer__der {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+
+            /* Datos de contacto */
+            .datosContacto {
+                line-height: 1.4;
+            }
+
+            /* Correo de contacto */
+            .correo {
+                line-height: 1.2;
+                padding: 2.5rem 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* Iconos de redes sociales */
+            .iconos {
+                img {
+                    width: 3.5rem;
+                }
+            }
+
+            /* Ocultar logo en pantallas pequeñas */
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
