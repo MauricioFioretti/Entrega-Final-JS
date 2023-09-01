@@ -30,7 +30,7 @@ divCards.className = "container-cards"
 sectionNandu.appendChild(divCards)
 
 //creamos cada card con el fetch
-const promesa = fetch("/libros.json")
+const promesa = fetch("./libros.json")
     .then((respuesta) => respuesta.json())
     .then((respuesta) => {
         for (obj of respuesta) {
