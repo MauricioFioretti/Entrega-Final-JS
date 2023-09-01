@@ -5,7 +5,7 @@ izqSection.className = 'footer__izq'
 
 const logoIzqImg = document.createElement('img')
 logoIzqImg.className = 'footer__logo-izq'
-logoIzqImg.src = '../img/Logos Footer/FondoFOMAtransparenteLetrasBlancas.svg'
+logoIzqImg.src = './img/Logos Footer/FondoFOMAtransparenteLetrasBlancas.svg'
 logoIzqImg.alt = 'logo FOMA'
 izqSection.appendChild(logoIzqImg)
 
@@ -46,7 +46,7 @@ iconosFaceA.className = 'iconos-face'
 iconosFaceA.target = '_blank'
 iconosFaceA.href = 'https://www.facebook.com/omacordoba?mibextid=ZbWKwL'
 const iconosFaceImg = document.createElement('img')
-iconosFaceImg.src = '../img/Logos Footer/logoFacebook.svg'
+iconosFaceImg.src = './img/Logos Footer/logoFacebook.svg'
 iconosFaceImg.alt = 'logo Facebook'
 iconosFaceA.appendChild(iconosFaceImg)
 
@@ -55,7 +55,7 @@ iconosInstaA.className = 'iconos-insta'
 iconosInstaA.target = '_blank'
 iconosInstaA.href = 'https://instagram.com/omacordoba?igshid=MzRlODBiNWFlZA=='
 const iconosInstaImg = document.createElement('img')
-iconosInstaImg.src = '../img/Logos Footer/logoInstagram.svg'
+iconosInstaImg.src = './img/Logos Footer/logoInstagram.svg'
 iconosInstaImg.alt = 'logo Instagram'
 iconosInstaA.appendChild(iconosInstaImg)
 
@@ -67,7 +67,7 @@ const logoDivFoot = document.createElement('div')
 logoDivFoot.className = 'logo'
 
 const logoImgFoot = document.createElement('img')
-logoImgFoot.src = '../img/Logos Footer/FondoOMAtransparenteLetrasBlancas.svg'
+logoImgFoot.src = './img/Logos Footer/FondoOMAtransparenteLetrasBlancas.svg'
 logoImgFoot.alt = 'logo OMA'
 logoDivFoot.appendChild(logoImgFoot)
 
